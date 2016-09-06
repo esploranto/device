@@ -1,0 +1,179 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: local('Gilroy Light'), local('Gilroy-Light'), url('../fonts/Gilroylight.woff2') format('woff2'), url('../fonts/Gilroylight.woff') format('woff'), url('../fonts/Gilroylight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gilroy';
+    src: local('Gilroy ExtraBold'), local('Gilroy-ExtraBold'), url('../fonts/Gilroyextrabold.woff2') format('woff2'), url('../fonts/Gilroyextrabold.woff') format('woff'), url('../fonts/Gilroyextrabold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+
+body {
+  font: 15px/30px "Open Sans", "Verdana", sans-serif;
+  color: #464646;
+}
+
+/* Шапка */
+.main-header {
+  min-height: 300px;
+  width: 1160px;
+  padding: 50px 60px 0;
+  margin: 40px auto 0;
+  position: relative;
+  background: #f7e296;
+}
+  .logo {
+    position: absolute;
+    top: -18px;
+    left: 58px;
+    display: block;
+    text-decoration: none;
+    color: #000;
+    font: bold 48px "Gilroy", "Arial", sans;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  .search {
+    float: left;
+  }
+    .search__input {
+      width: 315px;
+      height: 49px;
+      border-width: 0 0 2px;
+      border-bottom: 2px solid #000;
+      padding-left: 35px;
+      display: inline-block;
+      background: url("../img/search.png") 0 50% no-repeat;
+    }
+    .search__input:invalid {
+      border: none;
+      color: rgba(0, 0, 0, 0.3);
+      box-shadow: none;
+    }
+    .search__input:hover {
+      color: rgba(0, 0, 0, 0.6);
+    }
+    .search__input:active,
+    .search__input:focus {
+      color: rgba(0, 0, 0, 1);
+    }
+    .search__input:invalid + .search__button {
+      display: none;
+    }
+    .search__button {
+      width: 85px;
+      height: 49px;
+      border: 2px solid #000;
+      position: relative;
+      top: 3px;
+      left: -3px;
+      display: inline-block;
+      background: transparent;
+    }
+    .search__button:hover {
+      color: rgba(255, 255, 255, 1);
+      background: #000;
+    }
+    .search__button:active,
+    .search__button:focus {
+      color: rgba(255, 255, 255, 0.3);
+    }
+
+    .user-profile {
+      width: 620px;
+      margin-top: 10px;
+      float: right;
+      overflow: hidden; /* заменить на клирфикс*/
+    }
+      .user-login {
+        float: left;
+      }
+        .user-login__link::before {
+          content: url('../img/user-header.png');
+        }
+        .user-login__link:link, .user-login__link:visited {
+          color: #000;
+        }
+        .user-login__link:focus, .user-login__link:hover {
+          opacity: 0.5;
+        }
+        .user-login__link:active {
+          opacity: 0.3;
+        }
+      .nav-add {
+        margin: 0;
+        float: right;
+      }
+        .nav-add__item {
+
+          display: inline-block;
+          vertical-align: top;
+        }
+          .nav-add__link, .nav-add__link:link, .unav-add__link:visited {
+            padding-left: 20px;
+            color: #000;
+          }
+          .nav-add__link:focus, .nav-add__link:hover {
+
+          }
+          .nav-add__link:active {
+
+          }
+          .nav-add__link_compare::before {
+            content: url('../img/compare-header.png');
+          }
+          .nav-add__link_cart::before {
+            content: url('../img/cart-header.png');
+          }
+
+  .nav {
+    clear: both;
+    background: red;
+  }
+    .nav-global {
+      padding: 0;
+    }
+      .nav-global__item {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 40px;
+      }
+      .nav-global__item:nth-child(2n) {
+        position: absolute;
+        left: 600px;
+      }
+      .nav-global__item:nth-child(3n) {
+        position: absolute;
+        left: 760px;
+      }
+      .nav-global__item:nth-child(4n) {
+        position: absolute;
+        right: 20px;
+        text-align: right;
+      }
+      .nav-global__link {
+        font: bold 18px/normal "Gilroy", "Arial", sans;
+        color: #000;
+        letter-spacing: 3.6px;
+        text-transform: uppercase;
+      }
+        .nav-local {
+          width: 1040px;
+          height: 141px;
+          background: green;
+        }
+          .nav-local__group {
+            width: 160px;
+            margin-right: 40px;
+          }
+            .nav-local__group-item {
+              display: inline-block;
+              vertical-align: top;
+            }
+          .nav-local__group:first-child {
+            width: 200px;
+          }
